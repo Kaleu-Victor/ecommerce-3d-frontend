@@ -1,0 +1,32 @@
+.pagina-inicial {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.cabecalho-destaque {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, rgba(6, 182, 212, 0.1) 100%);
+  border-radius: 12px;
+  border: 1px solid rgba(6, 182, 212, 0.2);
+}
+
+.cabecalho-destaque h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(to right, var(--text-primary), var(--accent-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cabecalho-destaque p {
+  color: var(--text-secondary);
+  font-size: 1.125rem;
+}
+
+.grid-produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}

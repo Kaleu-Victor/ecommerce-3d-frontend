@@ -1,0 +1,49 @@
+.barra-navegacao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--bg-secondary);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo-texto {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: -0.5px;
+}
+
+.destaque {
+  color: var(--accent-color);
+}
+
+.links-navegacao {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.links-navegacao a {
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.links-navegacao a:hover {
+  color: var(--accent-color);
+}
+
+.btn-entrar {
+  background-color: var(--accent-color);
+  color: var(--bg-primary) !important;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: bold !important;
+}
+
+.btn-entrar:hover {
+  background-color: var(--accent-hover);
+}
