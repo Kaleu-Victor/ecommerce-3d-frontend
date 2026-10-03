@@ -2,11 +2,16 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './CartaoProduto.css';
 
+import { adicionarItem } from '../../controllers/carrinhoController';
+
 const CartaoProduto = ({ produto }) => {
   const navigate = useNavigate();
 
-  const verPedido = () => {
-    navigate(`/pedido/${produto.id}`);
+  const aoClicarComprar = () => {
+    // Adiciona o item ao carrinho via Controlador
+    adicionarItem(produto);
+    // Redireciona o usuário para a página do carrinho
+    navigate('/carrinho');
   };
 
   return (
@@ -23,7 +28,7 @@ const CartaoProduto = ({ produto }) => {
 
         <div className="produto-rodape">
           <span className="produto-preco">R$ {produto.preco.toFixed(2)}</span>
-          <button onClick={verPedido} className="btn-comprar">
+          <button onClick={aoClicarComprar} className="btn-comprar">
             Comprar
           </button>
         </div>
