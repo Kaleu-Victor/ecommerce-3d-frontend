@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import BarraNavegacao from './views/componentes/BarraNavegacao';
 import PaginaInicial from './views/paginas/PaginaInicial';
 import VisualizacaoPedido from './views/paginas/VisualizacaoPedido';
+import CarrinhoPagina from './views/paginas/CarrinhoPagina';
 import './App.css';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <main className="conteudo-principal">
           <Routes>
             <Route path="/" element={<PaginaInicial />} />
+            <Route path="/carrinho" element={<CarrinhoPagina />} />
             <Route path="/pedido/:id" element={<VisualizacaoPedido />} />
           </Routes>
         </main>
