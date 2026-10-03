@@ -1,16 +1,29 @@
 import React, { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import CartaoProduto from '../componentes/CartaoProduto';
 import { buscarProdutos } from '../../controllers/produtoController';
 import './PaginaInicial.css';
 
 const PaginaInicial = () => {
   const [produtos, setProdutos] = useState([]);
+  const [searchParams] = useSearchParams();
+  const termoBusca = searchParams.get('busca');
 
   useEffect(() => {
     // Simulando uma busca ao backend, conectando Controlador e Modelo
-    const dados = buscarProdutos();
+    let dados = buscarProdutos();
+    
+    // Filtra os produtos caso haja um termo de busca
+    if (termoBusca) {
+      const termoFormatado = termoBusca.toLowerCase();
+      dados = dados.filter(produto => 
+        produto.nome.toLowerCase().includes(termoFormatado) || 
+        produto.descricao.toLowerCase().includes(termoFormatado)
+      );
+    }
+    
     setProdutos(dados);
-  }, []);
+  }, [termoBusca]);
 
   return (
     <div className="pagina-inicial">
@@ -20,9 +33,13 @@ const PaginaInicial = () => {
       </header>
 
       <div className="grid-produtos">
-        {produtos.map(produto => (
-          <CartaoProduto key={produto.id} produto={produto} />
-        ))}
+        {produtos.length > 0 ? (
+          produtos.map(produto => (
+            <CartaoProduto key={produto.id} produto={produto} />
+          ))
+        ) : (
+          <p className="nenhum-produto">Nenhum produto encontrado para "{termoBusca}".</p>
+        )}
       </div>
     </div>
   );
