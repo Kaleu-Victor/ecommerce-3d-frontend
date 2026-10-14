@@ -4,6 +4,7 @@ import BarraNavegacao from './views/componentes/BarraNavegacao';
 import PaginaInicial from './views/paginas/PaginaInicial';
 import VisualizacaoPedido from './views/paginas/VisualizacaoPedido';
 import CarrinhoPagina from './views/paginas/CarrinhoPagina';
+import PerfilPagina from './views/paginas/PerfilPagina';
 import './App.css';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
             <Route path="/" element={<PaginaInicial />} />
             <Route path="/carrinho" element={<CarrinhoPagina />} />
             <Route path="/pedido/:id" element={<VisualizacaoPedido />} />
+            <Route path="/perfil" element={<PerfilPagina />} />
           </Routes>
         </main>
       </div>

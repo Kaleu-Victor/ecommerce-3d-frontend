@@ -51,6 +51,7 @@ const BarraNavegacao = () => {
         <li><Link to="/">Catálogo</Link></li>
         <li><Link to="/carrinho" className="link-carrinho">Carrinho <span className="badge">{qtdCarrinho}</span></Link></li>
         <li><Link to="/pedido/1">Meus Pedidos</Link></li>
+        <li><Link to="/perfil">Meu Perfil</Link></li>
         <li><Link to="/login" className="btn-entrar">Entrar</Link></li>
       </ul>
     </nav>
