@@ -1,0 +1,101 @@
+.barra-navegacao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--bg-secondary);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo-texto {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: -0.5px;
+}
+
+.destaque {
+  color: var(--accent-color);
+}
+
+.busca-container {
+  display: flex;
+  flex: 1;
+  max-width: 400px;
+  margin: 0 2rem;
+  background-color: var(--bg-primary);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.input-busca {
+  flex: 1;
+  background: transparent;
+  border: none;
+  padding: 0.5rem 1rem;
+  color: var(--text-primary);
+  outline: none;
+}
+
+.input-busca::placeholder {
+  color: var(--text-secondary);
+}
+
+.btn-busca {
+  background: transparent;
+  border: none;
+  padding: 0.5rem 1rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.btn-busca:hover {
+  color: var(--accent-color);
+}
+
+.links-navegacao {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.links-navegacao a {
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.links-navegacao a:hover {
+  color: var(--accent-color);
+}
+
+.btn-entrar {
+  background-color: var(--accent-color);
+  color: var(--bg-primary) !important;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: bold !important;
+}
+
+.btn-entrar:hover {
+  background-color: var(--accent-hover);
+}
+
+.link-carrinho {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.badge {
+  background-color: var(--accent-color);
+  color: var(--bg-primary);
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+}
